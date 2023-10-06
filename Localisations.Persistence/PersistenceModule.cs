@@ -20,6 +20,8 @@ namespace Localisations.Persistence
 
             services.AddTransient<ILocalisationRepository, LocalisationRepository>();
 
+            isModuleAdded = true;
+
             return services;
         }
     }
