@@ -1,8 +1,8 @@
 ﻿using Localisations.Domain.Entities;
 
-namespace Localisations.Persistence.Repositories
+namespace Localisations.Application.Services
 {
-    public interface ILocalisationRepository
+    public interface ILocalisationService
     {
         Task<IEnumerable<Localisation>> GetLocalisations();
 

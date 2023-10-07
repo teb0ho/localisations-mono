@@ -18,7 +18,15 @@ namespace Localisations.Persistence
             {
                 o.MigrationsAssembly(typeof(LocalisationsDbContext).GetTypeInfo().Assembly.GetName().Name);
             });
-            throw new NotImplementedException();
+            
+            return new LocalisationsDbContext(builder.Options);
+        }
+
+        public DbContextOptions<LocalisationsDbContext> GetOptions(IConfiguration configuration)
+        {
+            var builder = new DbContextOptionsBuilder<LocalisationsDbContext>();
+            builder.UseSqlite(GetConnectionString(configuration));
+            return builder.Options;
         }
 
         public static string GetConnectionString(IConfiguration configuration)

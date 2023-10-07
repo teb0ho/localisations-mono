@@ -1,5 +1,7 @@
 ﻿using Localisations.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Localisations.Persistence.Repositories
 {
@@ -13,8 +15,45 @@ namespace Localisations.Persistence.Repositories
         }
 
         public async Task<IEnumerable<Localisation>> GetLocalisations()
+         => await _context.Localisations.ToListAsync();
+
+
+        public async Task<Localisation?> GetLocalisationByIdAsync(int id)
+            => await _context.Localisations.FirstOrDefaultAsync(x => x.Id == id);
+
+        public async Task<int> CreateLocalisationAsync(Localisation localisation)
         {
-            return await _context.Localisations.ToListAsync();
+            _context.Add(localisation);
+            return await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteLocalisationByIdAsync(int id)
+        {
+            var localisation = await _context.Localisations.Where(x => x.Id == id).FirstOrDefaultAsync();
+
+            if (localisation != null)
+            {
+                _context.Localisations.Remove(localisation);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new NotSupportedException("Id was not found");
+            }
+        }
+
+        public async Task UpdateLocalisationAsync(Localisation localisation)
+        {
+            var localisationToUpdate = await _context.Localisations.Where(x => x.Id == localisation.Id)
+                    .FirstOrDefaultAsync();
+
+            if (localisationToUpdate != null)
+            {
+                localisationToUpdate.Content = localisation.Content;
+                localisationToUpdate.LastModified = DateTime.Now;
+            }
+
+            await _context.SaveChangesAsync();
         }
     }
 }

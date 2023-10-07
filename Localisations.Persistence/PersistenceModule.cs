@@ -8,21 +8,30 @@ namespace Localisations.Persistence
     public static class PersistenceModule
     {
 
-        private static bool isModuleAdded;
+        private static bool _isModuleAdded;
 
         public static IServiceCollection AddPersistenceModule(this IServiceCollection services, IConfiguration configuration)
         {
 
-            if (isModuleAdded) return services;
+            if (_isModuleAdded) return services;
 
             services.AddDbContextFactory<LocalisationsDbContext>(options =>
                 options.UseSqlite(LocalisationsDbContextFactory.GetConnectionString(configuration)));
 
             services.AddTransient<ILocalisationRepository, LocalisationRepository>();
 
-            isModuleAdded = true;
+            RunMigrations(configuration);
+
+            _isModuleAdded = true;
 
             return services;
+        }
+
+        public static void RunMigrations(IConfiguration configuration)
+        {
+            using var context = new LocalisationsDbContext(new LocalisationsDbContextFactory().GetOptions(configuration));
+
+            context.Database.Migrate();
         }
     }
 }
