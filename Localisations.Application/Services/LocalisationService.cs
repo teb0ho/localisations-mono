@@ -21,10 +21,14 @@ namespace Localisations.Application.Services
         public async Task<Localisation?> GetLocalisationByIdAsync(int id)
             => await _repository.GetLocalisationByIdAsync(id);
 
-        public Task<IEnumerable<Localisation>> GetLocalisations()
-            => _repository.GetLocalisations();
+        public async Task<IEnumerable<Localisation>> GetLocalisations()
+            => await _repository.GetLocalisations();
 
-        public Task UpdateLocalisationAsync(Localisation localisation)
-            => _repository.UpdateLocalisationAsync(localisation);
+        public async Task UpdateLocalisationAsync(Localisation localisation)
+            => await _repository.UpdateLocalisationAsync(localisation);
+
+        public async Task<IEnumerable<Localisation>> SearchLocalisationsAsync(string searchQuery)
+            => await _repository.SearchLocalisationsAsync(searchQuery);
+            
     }
 }

@@ -6,6 +6,8 @@ namespace Localisations.Application.Services
     {
         Task<IEnumerable<Localisation>> GetLocalisations();
 
+        Task<IEnumerable<Localisation>> SearchLocalisationsAsync(string searchQuery);
+
         Task<Localisation?> GetLocalisationByIdAsync(int id);
 
         Task<int> CreateLocalisationAsync(Localisation localisation);

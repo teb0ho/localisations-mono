@@ -14,7 +14,7 @@ namespace Localisations.Persistence
         {
             var builder = new DbContextOptionsBuilder<LocalisationsDbContext>();
 
-            builder.UseSqlite(GetConnectionString(), o =>
+            builder.UseSqlServer(GetConnectionString(), o =>
             {
                 o.MigrationsAssembly(typeof(LocalisationsDbContext).GetTypeInfo().Assembly.GetName().Name);
             });
@@ -25,7 +25,7 @@ namespace Localisations.Persistence
         public DbContextOptions<LocalisationsDbContext> GetOptions(IConfiguration configuration)
         {
             var builder = new DbContextOptionsBuilder<LocalisationsDbContext>();
-            builder.UseSqlite(GetConnectionString(configuration));
+            builder.UseSqlServer(GetConnectionString(configuration));
             return builder.Options;
         }
 

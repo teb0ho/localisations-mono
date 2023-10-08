@@ -1,7 +1,5 @@
 ﻿using Localisations.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using SQLitePCL;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Localisations.Persistence.Repositories
 {
@@ -20,6 +18,9 @@ namespace Localisations.Persistence.Repositories
 
         public async Task<Localisation?> GetLocalisationByIdAsync(int id)
             => await _context.Localisations.FirstOrDefaultAsync(x => x.Id == id);
+
+        public async Task<IEnumerable<Localisation>> SearchLocalisationsAsync(string searchQuery)
+            => await _context.Localisations.Where(x => x.Content.ToLower().Contains(searchQuery.ToLower())).ToListAsync();
 
         public async Task<int> CreateLocalisationAsync(Localisation localisation)
         {

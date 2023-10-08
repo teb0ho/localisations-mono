@@ -16,7 +16,7 @@ namespace Localisations.Persistence
             if (_isModuleAdded) return services;
 
             services.AddDbContextFactory<LocalisationsDbContext>(options =>
-                options.UseSqlite(LocalisationsDbContextFactory.GetConnectionString(configuration)));
+                options.UseSqlServer(LocalisationsDbContextFactory.GetConnectionString(configuration)));
 
             services.AddTransient<ILocalisationRepository, LocalisationRepository>();
 
