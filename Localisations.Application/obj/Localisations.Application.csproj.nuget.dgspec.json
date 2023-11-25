@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj": {
                 "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj"
+              },
+              "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj": {
+                "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj"
               }
             }
           }
@@ -43,6 +46,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -109,7 +118,7 @@
               "target": "Package",
               "version": "[7.0.11, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.11, )"
             },

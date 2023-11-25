@@ -4,6 +4,163 @@
     "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.WebAPI\\Localisations.WebAPI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Application\\Localisations.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Application\\Localisations.Application.csproj",
+        "projectName": "Localisations.Application",
+        "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Application\\Localisations.Application.csproj",
+        "packagesPath": "C:\\Users\\teboh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\teboh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj": {
+                "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj"
+              },
+              "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj": {
+                "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj",
+        "projectName": "Localisations.Persistence",
+        "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj",
+        "packagesPath": "C:\\Users\\teboh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\teboh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj": {
+                "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.WebAPI\\Localisations.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +169,96 @@
         "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.WebAPI\\Localisations.WebAPI.csproj",
         "packagesPath": "C:\\Users\\teboh\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.WebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\teboh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Application\\Localisations.Application.csproj": {
+                "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Application\\Localisations.Application.csproj"
+              },
+              "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj": {
+                "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations.Persistence\\Localisations.Persistence.csproj"
+              },
+              "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj": {
+                "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj",
+        "projectName": "Localisations.Domain",
+        "projectPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\Localisations.Domain.csproj",
+        "packagesPath": "C:\\Users\\teboh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\teboh\\source\\repos\\Localisations\\Localisations\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\teboh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,16 +286,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.17.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -61,9 +298,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

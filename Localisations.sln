@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localisations.Domain", "Localisations\Localisations.Domain.csproj", "{C5309465-5D21-4D3B-884F-A677FB606D12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localisations.Domain", "Localisations.Domain\Localisations.Domain.csproj", "{C5309465-5D21-4D3B-884F-A677FB606D12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B8AA98CA-F47F-4B77-84E1-D9CF8410841B}"
 EndProject
